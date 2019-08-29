@@ -1,0 +1,52 @@
+#centered-header {
+    font-size: 45px;
+    color: #669999;
+}
+
+#headercontainer {
+    background-color: #eeeeee;
+    color: #ffffff;
+    border: solid thin #dddddd;
+    /* border: thin black;
+     margin: 0;
+     padding: 20px; */
+    
+}
+
+.class {
+    
+}
+
+#actual-header {
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    border: solid thin #dddddd;
+    margin-top: 1%;
+    align-self: stretch;
+    padding: 1%;
+    text-align: center;
+    /* flex: 1 0 auto; */
+}
+
+.p-increase-font {
+    font-size: 20px;
+}
+
+#score-section {
+    text-align: left
+}
+
+#centered-h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url(../images/skulls.png);
+    background-repeat: repeat
+}

@@ -21,29 +21,41 @@ var reset =function(){
     computerChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
 
 }
+var hasGameStarted = false;
+
+
+document.getElementById('hide').style.display='none';
 
 document.onkeyup = function(event) {
-    var playerChoice = event.key;
-    var computerChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
-    
-    guessesSoFar.push(playerChoice);
+        
+    if(hasGameStarted){
 
-    if (playerChoice === computerChoice) {
-        wins++;
+            var playerChoice = event.key;
+            var computerChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
+        
+            guessesSoFar.push(playerChoice);
+
+            if (playerChoice === computerChoice) {
+            wins++;
+        }
+        else {
+            guessesLeft--;
+        }
+        if (guessesLeft===0){
+            losses++;
+            reset();
+        }
+        
+        playerWins.textContent = " " + wins;
+        playerLosses.textContent = " " + losses;
+        guessesRem.textContent = ' ' + guessesLeft;
+        guessesUsed.textContent = " " + guessesSoFar
+        
     }
     else {
-        guessesLeft--;
+        document.getElementById('hide').style.display='block';
+        hasGameStarted = true;
     }
-    if (guessesLeft===0){
-        losses++;
-        reset();
-    }
-
-    playerWins.textContent = " " + wins;
-    playerLosses.textContent = " " + losses;
-    guessesRem.textContent = ' ' + guessesLeft;
-    guessesUsed.textContent = " " + guessesSoFar
-   
 }
 
 //TODO: computer choice set to random choice from array (randomLetter)
