@@ -34,12 +34,13 @@
     /* flex: 1 0 auto; */
 }
 
+/* .centered-card {
+    display: flex;
+    align-items: center;
+} */
+
 .p-increase-font {
     font-size: 20px;
-}
-
-#score-section {
-    text-align: left
 }
 
 #centered-h1 {
