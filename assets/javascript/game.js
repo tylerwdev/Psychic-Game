@@ -1,5 +1,5 @@
 //create an array of the alphabet
-var randomLetter = [
+let randomLetter = [
   "a",
   "b",
   "c",
@@ -28,30 +28,32 @@ var randomLetter = [
   "z",
 ];
 
-var wins = 0;
-var losses = 0;
-var guessesLeft = 10;
-var guessesSoFar = [];
+let wins = 0;
+let losses = 0;
+let guessesLeft = 10;
+let guessesSoFar = [];
 
-var playerWins = document.getElementById("playerWins");
-var playerLosses = document.getElementById("playerLosses");
-var guessesRem = document.getElementById("guessesRem");
-var guessesUsed = document.getElementById("guessesUsed");
+let playerWins = document.getElementById("playerWins");
+let playerLosses = document.getElementById("playerLosses");
+let guessesRem = document.getElementById("guessesRem");
+let guessesUsed = document.getElementById("guessesUsed");
 
-var computerChoice =
+let computerChoice =
   randomLetter[Math.floor(Math.random() * randomLetter.length)];
 
-var reset = function () {
+let reset = function () {
   guessesLeft = 10;
   guessesSoFar = [];
   computerChoice =
     randomLetter[Math.floor(Math.random() * randomLetter.length)];
 };
-var hasGameStarted = false;
+let hasGameStarted = false;
 
 document.getElementById("hide").style.display = "none";
 
-document.onkeyup = function (event) {
+onclick = "startGame()";
+
+document.onclick = function (event) {
   if (hasGameStarted) {
     var playerChoice = event.key;
     var computerChoice =
@@ -78,7 +80,8 @@ document.onkeyup = function (event) {
     guessesUsed.textContent = " " + guessesSoFar;
   } else {
     document.getElementById("hide").style.display = "block";
-    document.getElementById("hide-test").style.display = "none";
+    document.getElementById("hidden1").style.display = "none";
+    document.getElementById("hidden2").style.display = "none";
     hasGameStarted = true;
   }
 };
