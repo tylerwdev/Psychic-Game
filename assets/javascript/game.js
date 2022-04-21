@@ -52,8 +52,13 @@ let hasGameStarted = false;
 document.getElementById("hide").style.display = "none";
 
 onclick = "startGame()";
+function startGame() {
+  document.getElementById("hide").style.display = "block";
+  document.getElementById("hidden1").style.display = "none";
+  document.getElementById("hidden2").style.display = "none";
+}
 
-document.onclick = function (event) {
+document.onkeyup = function (event) {
   if (hasGameStarted) {
     let playerChoice = event.key;
     let computerChoice =
@@ -79,9 +84,9 @@ document.onclick = function (event) {
     guessesRem.textContent = " " + guessesLeft;
     guessesUsed.textContent = " " + guessesSoFar;
   } else {
-    document.getElementById("hide").style.display = "block";
-    document.getElementById("hidden1").style.display = "none";
-    document.getElementById("hidden2").style.display = "none";
+    // document.getElementById("hide").style.display = "block";
+    // document.getElementById("hidden1").style.display = "none";
+    // document.getElementById("hidden2").style.display = "none";
     hasGameStarted = true;
   }
 };
