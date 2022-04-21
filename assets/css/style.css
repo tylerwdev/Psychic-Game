@@ -1,53 +1,63 @@
 #centered-header {
-    font-size: 45px;
-    color: #669999;
+  font-size: 45px;
+  color: #669999;
 }
 
 #headercontainer {
-    background-color: #eeeeee;
-    color: #ffffff;
-    border: solid thin #dddddd;
-    /* border: thin black;
+  background-color: #eeeeee;
+  color: #ffffff;
+  border: solid thin #dddddd;
+  /* border: thin black;
      margin: 0;
      padding: 20px; */
-    
 }
 
 .class {
-    
 }
 
 #actual-header {
-    margin: 0;
-    padding: 20px;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-    background-color: #ffffff;
-    width: 100%;
-    height: auto;
-    border: solid thin #dddddd;
-    margin-top: 1%;
-    align-self: stretch;
-    padding: 1%;
-    text-align: center;
-    /* flex: 1 0 auto; */
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  border: solid thin #dddddd;
+  margin-top: 1%;
+  align-self: stretch;
+  padding: 1%;
+  text-align: center;
+  /* flex: 1 0 auto; */
 }
 
 #flexwrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .p-increase-font {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #centered-h1 {
-    text-align: center;
+  text-align: center;
 }
 
 body {
-    background-image: url(../images/skulls.png);
-    background-repeat: repeat
+  background-image: url(../images/skulls.png);
+  background-repeat: repeat;
+}
+
+@media screen and (min-width: 800px) {
+  #hidden3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #hidden3 {
+    display: block;
+  }
 }

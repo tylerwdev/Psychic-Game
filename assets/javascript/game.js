@@ -51,6 +51,8 @@ let hasGameStarted = false;
 
 document.getElementById("hide").style.display = "none";
 
+// onclick = "mobileText()";
+
 onclick = "startGame()";
 function startGame() {
   document.getElementById("hide").style.display = "block";
