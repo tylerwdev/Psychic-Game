@@ -55,8 +55,8 @@ onclick = "startGame()";
 
 document.onclick = function (event) {
   if (hasGameStarted) {
-    var playerChoice = event.key;
-    var computerChoice =
+    let playerChoice = event.key;
+    let computerChoice =
       randomLetter[Math.floor(Math.random() * randomLetter.length)];
 
     guessesSoFar.push(playerChoice);
