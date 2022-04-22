@@ -51,14 +51,16 @@ let hasGameStarted = false;
 
 document.getElementById("hide").style.display = "none";
 
-// onclick = "mobileText()";
-
 onclick = "startGame()";
 function startGame() {
   document.getElementById("hide").style.display = "block";
   document.getElementById("hidden1").style.display = "none";
   document.getElementById("hidden2").style.display = "none";
 }
+
+// Try to implement this later for touchscreens
+// test.on('keyup touchend', function(){
+// }
 
 document.onkeyup = function (event) {
   if (hasGameStarted) {
