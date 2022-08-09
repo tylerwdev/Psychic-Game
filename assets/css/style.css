@@ -1,27 +1,18 @@
-#centered-header {
-  font-size: 45px;
-  color: #669999;
-}
-
-#headercontainer {
-  background-color: #eeeeee;
-  color: #ffffff;
-  border: solid thin #dddddd;
-  /* border: thin black;
-     margin: 0;
-     padding: 20px; */
-}
-
-.class {
+body {
+  background-image: url(../images/skulls.png);
+  background-repeat: repeat;
 }
 
 #actual-header {
   margin: 0;
   padding: 20px;
+  font-size: 45px;
+  color: #669999;
+  text-align: center;
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: #ffffff99;
   width: 100%;
   height: auto;
   border: solid thin #dddddd;
@@ -29,7 +20,7 @@
   align-self: stretch;
   padding: 1%;
   text-align: center;
-  /* flex: 1 0 auto; */
+  margin-bottom: 1%;
 }
 
 #flexwrapper {
@@ -45,11 +36,7 @@
   text-align: center;
 }
 
-body {
-  background-image: url(../images/skulls.png);
-  background-repeat: repeat;
-}
-
+/* not using at the moment */
 @media screen and (min-width: 800px) {
   #hidden3 {
     display: none;
