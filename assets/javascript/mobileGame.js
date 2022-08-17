@@ -32,11 +32,15 @@ let wins = 0;
 let losses = 0;
 let guessesLeft = 10;
 let guessesSoFar = [];
+let hasGameStarted = false;
 
 let playerWins = document.getElementById("playerWins");
 let playerLosses = document.getElementById("playerLosses");
 let guessesRem = document.getElementById("guessesRem");
 let guessesUsed = document.getElementById("guessesUsed");
+
+let btnStart = document.getElementById("start-btn");
+let btnReset = document.getElementById("reset-btn");
 
 let computerChoice =
   randomLetter[Math.floor(Math.random() * randomLetter.length)];
@@ -47,16 +51,14 @@ let reset = function () {
   computerChoice =
     randomLetter[Math.floor(Math.random() * randomLetter.length)];
 };
-let hasGameStarted = false;
 
 document.getElementById("hide").style.display = "none";
 
-onclick = "startGame()";
-function startGame() {
+btnStart.addEventListener("click", function () {
   document.getElementById("hide").style.display = "block";
   document.getElementById("hidden1").style.display = "none";
   document.getElementById("hidden2").style.display = "none";
-}
+});
 
 // Try to implement this later for touchscreens
 // test.on('keyup touchend', function(){
@@ -94,6 +96,12 @@ document.onkeyup = function (event) {
     hasGameStarted = true;
   }
 };
+
+btnReset.addEventListener("click", function () {
+  reset();
+});
+
+let test = "Let's try this";
 
 //: computer choice set to random choice from array (randomLetter)
 //: user key stroke needs to check with computer random choice
